@@ -18,7 +18,7 @@ const quotes = [
 
 
 // ②Pick a random object from the quotes array and return it
-function getRandomQuote () {
+function getRandomQuote(){
   let randomNum = Math.floor(Math.random() * quotes.length);
   return quotes[randomNum];
 }
@@ -26,19 +26,20 @@ function getRandomQuote () {
 
 
 // ③Select the value to be displayed on the screen and store it in the "#quote-box"
-function printQuote () {
+function printQuote(){
   let randomQuote = getRandomQuote();
   let randomHtml = `<p class="quote"> ${randomQuote.quote} </p>
   <p class="source"> ${randomQuote.source} </p>`;
 
-  if (randomQuote.citation) {
+  if(randomQuote.citation){
   randomHtml += `<span class="citation"> ${randomQuote.citation} </span>`
   }
-  if (randomQuote.year) {
+  if(randomQuote.year){
   randomHtml += `<span class="year"> ${randomQuote.year} </span>`
   }
 
   document.getElementById("quote-box").innerHTML = randomHtml;
+
 }
 
 
