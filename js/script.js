@@ -25,14 +25,29 @@ const quotes = [
 ***/
 function getRandomQuote () {
   let randomNum = Math.floor(Math.random() * quotes.length);
-  return quotes[randomNum].quote;
+  return quotes[randomNum];
 }
 
 
 /***
  * `printQuote` function
 ***/
+function printQuote () {
+  let quote1 = getRandomQuote();
+  let storeHtml = `<p class="quote"> ${quote1.quote} </p>
+  <p class="source"> ${quote1.source} </p>`;
 
+  if (quote1.citation) {
+  storeHtml += `<span class="citation> ${quote1.citation} </span>`
+  }
+  if (quote1.year) {
+  storeHtml += `<span class="year"> ${quote1.year} </span>`
+  }
+
+  document.getElementById("quote-box").innerHTML = storeHtml;
+}
+
+// document.getElementById("quote-box").innerHTML = printQuote();
 
 
 /***
