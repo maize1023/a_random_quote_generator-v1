@@ -23,7 +23,10 @@ const quotes = [
 /***
  * `getRandomQuote` function
 ***/
-
+function getRandomQuote () {
+  let randomNum = Math.floor(Math.random() * quotes.length);
+  return quotes[randomNum].quote;
+}
 
 
 /***
