@@ -51,7 +51,7 @@ function printQuote(){
   }
 
   document.getElementById("quote-box").innerHTML = randomHtml;
-  document.getElementsByTagName("body").style.backgroundColor = changeBackgroundColor();
+  document.querySelector("body").style.backgroundColor = changeBackgroundColor();
 }
 
 
