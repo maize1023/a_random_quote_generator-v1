@@ -24,6 +24,16 @@ function getRandomQuote(){
 }
 
 
+// extra credit
+function changeBackgroundColor(){
+  let get256 = Math.floor(Math.random()*256);
+  let[r, g, b] = [get256(), get256(), get256()]
+  let color = `rgb(${r}, ${g}, ${b})`;
+  return color;
+}
+
+
+
 
 // ③Select the value to be displayed on the screen and store it in the "#quote-box"
 function printQuote(){
@@ -39,7 +49,6 @@ function printQuote(){
   }
 
   document.getElementById("quote-box").innerHTML = randomHtml;
-
 }
 
 
