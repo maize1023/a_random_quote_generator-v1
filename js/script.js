@@ -26,7 +26,9 @@ function getRandomQuote(){
 
 // extra credit
 function changeBackgroundColor(){
-  let get256 = Math.floor(Math.random()*256);
+  let get256 = ()=>{
+    return Math.floor(Math.random()*256);
+  };
   let[r, g, b] = [get256(), get256(), get256()]
   let color = `rgb(${r}, ${g}, ${b})`;
   return color;
@@ -49,6 +51,7 @@ function printQuote(){
   }
 
   document.getElementById("quote-box").innerHTML = randomHtml;
+  document.getElementsByTagName("body").style.backgroundColor = changeBackgroundColor();
 }
 
 
